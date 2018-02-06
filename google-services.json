@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "347228270942",
+    "firebase_url": "https://cleansecurepool-e1120.firebaseio.com",
+    "project_id": "cleansecurepool-e1120",
+    "storage_bucket": "cleansecurepool-e1120.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347228270942:android:e3b9d7c102b4d210",
+        "android_client_info": {
+          "package_name": "com.example.filipe.qualquercoisadeextraordinario"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347228270942-0pvam1of9jipid8h38g5d0ba661ghmk5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBJnY-S6HHzXjHpobPoMxKs4kOQ1r7CV74"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

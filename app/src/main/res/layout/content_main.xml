@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.filipe.qualquercoisadeextraordinario.MainActivity"
+    tools:showIn="@layout/activity_main"
+    tools:layout_editor_absoluteY="25dp"
+    tools:layout_editor_absoluteX="0dp">
+
+
+  //Temperatura
+    <TextView
+        android:id="@+id/titleTemperatureID"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@android:color/background_dark"
+        android:text="Temperature:"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="34dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp" />
+
+    <TextView
+        android:id="@+id/temperatureView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="@string/_25"
+        app:layout_constraintLeft_toRightOf="@+id/titleTemperatureID"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp" />
+
+    <TextView
+        android:text="ºC"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/DegreesID"
+        app:layout_constraintLeft_toRightOf="@+id/temperatureView"
+        android:layout_marginLeft="36dp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="60dp" />
+
+    //Cloro
+
+    <TextView
+        android:id="@+id/titleChlorineID"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@android:color/background_dark"
+        android:text="ORP:"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintRight_toRightOf="@+id/titleTemperatureID"
+        app:layout_constraintTop_toBottomOf="@+id/titleTemperatureID"
+        android:layout_marginTop="2dp"/>
+
+    <TextView
+        android:id="@+id/chlorineView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="650"
+        app:layout_constraintLeft_toRightOf="@+id/titleChlorineID"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/temperatureView"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/temperatureView"/>
+
+
+
+    <TextView
+        android:text="mV"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/mVID"
+        app:layout_constraintLeft_toRightOf="@+id/chlorineView"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/DegreesID"
+        android:layout_marginTop="2dp"/>
+
+    //pH
+
+    <TextView
+        android:id="@+id/titlepHID"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@android:color/background_dark"
+        android:text="pH:"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintTop_toBottomOf="@+id/titleChlorineID"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/titleChlorineID"/>
+
+    <TextView
+        android:id="@+id/phView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="7.5"
+        app:layout_constraintLeft_toRightOf="@+id/titlepHID"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/chlorineView"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/chlorineView"/>
+
+    //pressão
+    <TextView
+        android:id="@+id/titlePressureID"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@android:color/black"
+        android:text="Pressure"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/titlepHID"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/titlepHID"/>
+
+    <TextView
+        android:id="@+id/PressureView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="2"
+        app:layout_constraintLeft_toRightOf="@+id/titlePressureID"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/phView"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/phView"/>
+
+    <TextView
+        android:id="@+id/barID"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="bar"
+        app:layout_constraintLeft_toRightOf="@+id/PressureView"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/phView"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/mVID"/>
+
+    //Nível de água
+
+    <TextView
+        android:id="@+id/titleWaterLevelID"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="Water Level"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/titlePressureID"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/titlePressureID" />
+
+    <TextView
+        android:text="Full"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/WaterLevelView"
+        app:layout_constraintLeft_toRightOf="@+id/titleWaterLevelID"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/PressureView"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/PressureView"/>
+
+    //Nivel de cloro
+
+    <TextView
+        android:id="@+id/titleChlorineLevelID"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_green_dark"
+        android:text="Chlorine Level"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/titleWaterLevelID"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/titleWaterLevelID" />
+
+    <TextView
+        android:text="Empty"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/ChlorineLevelView"
+        tools:layout_editor_absoluteY="218dp"
+        app:layout_constraintLeft_toRightOf="@+id/titleChlorineLevelID"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/WaterLevelView"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/WaterLevelView"/>
+
+    //Nivel de ácido
+
+    <TextView
+        android:id="@+id/titleAcidLevelID"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:background="@android:color/holo_red_dark"
+        android:text="Acid Level"
+        android:textColor="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/titleChlorineLevelID"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/titleChlorineLevelID" />
+
+
+    <TextView
+        android:id="@+id/AcidLevelView"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:text="Empty"
+        app:layout_constraintLeft_toRightOf="@+id/titleAcidLevelID"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintTop_toBottomOf="@+id/ChlorineLevelView"
+        android:layout_marginTop="2dp"
+        app:layout_constraintRight_toRightOf="@+id/ChlorineLevelView"/>
+
+
+    //-----------------------------------------FIM DAS TEXTVIEWS----------------------------------------
+
+    //-----------------------------------------CONTROLO DA TEMPERATURA----------------------------------
+    <TextView
+        android:id="@+id/TemperatureControlTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:text="Temperature control"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="180dp"
+        />
+
+    <Button
+        android:id="@+id/temperatureDownBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark"
+        android:text="Decrease"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/TemperatureControlTextView"
+        app:layout_constraintBottom_toTopOf="@+id/securityButton"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/set_temperature_button"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:text="Set"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintRight_toLeftOf="@+id/temperatureDownBtn"
+        android:layout_marginRight="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/TemperatureControlTextView"
+        app:layout_constraintBottom_toTopOf="@+id/securityButton"
+        android:layout_marginBottom="10dp" />
+
+    <Button
+        android:id="@+id/temperatureUpBtn"
+        android:layout_width="80dp"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_red_dark"
+        android:text="Increase"
+        app:layout_constraintRight_toLeftOf="@+id/set_temperature_button"
+        android:layout_marginRight="35dp"
+        app:layout_constraintTop_toBottomOf="@+id/TemperatureControlTextView"
+        app:layout_constraintBottom_toTopOf="@+id/securityButton"
+        android:layout_marginBottom="10dp"/>
+//---------------------------------------FIM DO CONTROLO DA TEMPERATURA-----------------------------
+
+    //-----------------------------------BOTÕES INFERIORES------------------------------------------
+
+    <Button
+        android:id="@+id/securityButton"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@android:color/darker_gray"
+        android:text="Security Mode"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintRight_toLeftOf="@+id/request_button"
+        android:layout_marginRight="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/set_temperature_button"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp"/>
+
+    <Button
+        android:id="@+id/request_button"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:background="@android:color/black"
+        android:text="Request Button"
+        android:textColor="@android:color/white"
+        tools:text="Request Button"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/set_temperature_button"
+        android:layout_marginTop="32dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="32dp"/>
+
+    //-----------------------------------SWITCH-----------------------------------------------------
+    <Switch
+        android:id="@+id/pump_switch"
+        android:layout_width="87dp"
+        android:layout_height="55dp"
+        android:text="Turn off pump"
+        android:layout_marginRight="33dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="240dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_begin="-113dp"
+        android:orientation="horizontal" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_begin="-23dp"
+        android:orientation="horizontal" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline3"
+        app:layout_constraintGuide_begin="-9dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="-565dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/guideline5"
+        app:layout_constraintGuide_begin="807dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="807dp"
+        tools:layout_editor_absoluteX="0dp" />
+
+</android.support.constraint.ConstraintLayout>
